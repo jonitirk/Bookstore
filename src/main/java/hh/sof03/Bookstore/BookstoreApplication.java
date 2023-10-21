@@ -9,9 +9,15 @@ import hh.sof03.Bookstore.domain.Book;
 import hh.sof03.Bookstore.domain.BookRepository;
 import hh.sof03.Bookstore.domain.Category;
 import hh.sof03.Bookstore.domain.CategoryRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 
 @SpringBootApplication
 public class BookstoreApplication {
+	
+	private static final Logger log = LoggerFactory.getLogger(BookstoreApplication.class);
+
 
 	public static void main(String[] args) {
 		SpringApplication.run(BookstoreApplication.class, args);
@@ -29,7 +35,15 @@ public class BookstoreApplication {
 			bookRepository.save(new Book("Harry Potter", "J.K.Rowling", "123-46-8", 2001, 5.00,
 					categoryRepository.findByName("Fantasy").get(0)));
 			
-			
+			log.info("Fetch all the categories");
+			for (Category category : categoryRepository.findAll()) {
+			log.info(category.toString());
+			}
+			log.info("Fetch all the books");
+			for (Book book : bookRepository.findAll()) {
+			log.info(book.toString());
+			}
+
 
 		};
 	}
