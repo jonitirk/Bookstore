@@ -3,7 +3,7 @@ The app can be found at https://bookstoreapp-joni-9edda933908c.herokuapp.com/
 This application has been published on GitHub to give employers an insight into my programming skills. 
 For this reason, the repository is public, and for testing purposes, the application's usernames and passwords are the following:
 
-Usernamme: User, Password: User
+Username: User, Password: User
 Username: Admin, Password: Admin
 
 Here's a brief look what the application looks like when logged in as an admin.
